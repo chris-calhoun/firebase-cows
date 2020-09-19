@@ -5,10 +5,11 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in
+      console.warn(user);
       $('#auth').addClass('hide');
       $('#pasture').removeClass('hide');
       $('#pasture').html(
-        `<img src="${user.photoUrl}" alt ="${user.displayName}"`
+        `<img src="${user.photoURL}" alt ="${user.displayName}">`
       );
       $('#navbar-logout-button').removeClass('hide');
     } else {

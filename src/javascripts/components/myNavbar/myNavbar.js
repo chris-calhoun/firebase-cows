@@ -4,7 +4,7 @@ import 'firebase/auth';
 const logoutEvent = () => {
   $('#navbar-logout-button').on('click', (e) => {
     e.preventDefault();
-    firebase.auth().Signout();
+    firebase.auth().signOut();
   });
 };
 
